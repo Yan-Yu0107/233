@@ -29,7 +29,6 @@
 
 <script setup lang="ts">
 import { VideoPlayer } from '@videojs-player/vue';
-import { Card } from 'vant';
 import 'video.js/dist/video-js.css';
 import { reactive, ref } from 'vue';
 const likeJudge = ref(true);
