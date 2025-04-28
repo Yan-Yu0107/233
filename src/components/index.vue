@@ -174,9 +174,11 @@ const onRefresh = async () => {
   //container.scrollHeight 表示容器的总高度
 const handleScroll = () => {
   const container = document.querySelector('.content');
-  console.log('表示滚动容器垂直滚动的距离',container.scrollTop);
-  console.log('表示容器的可见高度',container.clientHeight);
-  console.log('表示容器的总高度',container.scrollHeight);
+  if(container !== null){
+    console.log('表示滚动容器垂直滚动的距离',container.scrollTop);
+    console.log('表示容器的可见高度',container.clientHeight);
+    console.log('表示容器的总高度',container.scrollHeight);
+  }
   
   if (container !== null && 
     container.scrollTop + container.clientHeight >= container.scrollHeight && 
