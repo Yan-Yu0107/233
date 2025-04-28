@@ -1,4 +1,4 @@
-function detectLinkType(link) {
+function detectLinkType(link:any) {
     // 常见的图片文件扩展名
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp'];
     // 常见的视频文件扩展名

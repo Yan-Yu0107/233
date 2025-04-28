@@ -34,15 +34,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, reactive } from 'vue';
-import Card from '../composables/Card.vue';
+import { ref, onMounted } from 'vue';
+import Card from '@/composables/Card.vue';
 import a from '@/assets/a.png';
 import b from '@/assets/b.png';
 import c from '@/assets/c.png';
 import d from '@/assets/d.png';
 import e from '@/assets/e.png';
 import f from '@/assets/f.png';
-import g from '@/assets/g.png';
 import h from '@/assets/h.png';
 import i from '@/assets/i.png';
 import l from '@/assets/l.png';
@@ -51,9 +50,11 @@ import shiping2 from '@/assets/video-2.mp4';
 import shiping3 from '@/assets/video-3.mp4';
 import boy from '@/assets/icon-boy.png';
 import girl from '@/assets/icon-girl.png';
+import {detectLinkType} from '@/utils/linkTypeJudgment';
 
-
-import {detectLinkType} from '@/utils/linkTypeJudgment.js';
+interface CardData {
+  id: number;
+}
 
 const isLoading = ref(false);
 const hasMore = ref(true);
@@ -136,8 +137,8 @@ const fetchData = async () => {
   });
 };
 
-const cards1 = ref([]);
-const cards2 = ref([]);
+const cards1 = ref<CardData[]>([])
+const cards2 = ref<CardData[]>([])
 
 onMounted(async () => {
  await fetchData();

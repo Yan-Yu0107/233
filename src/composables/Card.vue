@@ -76,6 +76,7 @@ if (props.cardData.tylinkType == '视频') {
     playerOptions.sources[0].src = props.cardData.url; // 设置视频源
     // playerOptions.poster = props.cardData.url; // 设置视频封面
 }
+
 </script>
 
 <style lang="scss" scoped>
