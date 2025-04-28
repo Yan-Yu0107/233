@@ -8,7 +8,19 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/utils/linkTypeJudgment.ts"]
+  "include": ["src/**/*.ts",
+  "src/**/*.tsx", 
+  "src/**/*.vue", 
+  "src/utils/linkTypeJudgment.ts",   
+  "env.d.ts",
+  "src/**/*",
+  "src/**/*.Vue",
+  "src/**/*.ts"
+]
 }

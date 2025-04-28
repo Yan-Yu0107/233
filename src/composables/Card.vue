@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import { VideoPlayer } from '@videojs-player/vue';
+import { Card } from 'vant';
 import 'video.js/dist/video-js.css';
 import { reactive, ref } from 'vue';
 const likeJudge = ref(true);
@@ -76,7 +77,6 @@ if (props.cardData.tylinkType == '视频') {
     playerOptions.sources[0].src = props.cardData.url; // 设置视频源
     // playerOptions.poster = props.cardData.url; // 设置视频封面
 }
-
 </script>
 
 <style lang="scss" scoped>

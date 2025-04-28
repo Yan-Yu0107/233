@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import app from './components/index.vue'
+import App from '@/components/index.vue'
 </script>
 
 <template>
-  <app/>
+  <App/>
 </template>
 
 <style scoped>

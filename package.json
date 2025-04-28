@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.2",
+    "@volar/vue-language-server": "^1.6.5",
     "@vue/tsconfig": "^0.7.0",
     "sass": "^1.87.0",
     "sass-loader": "^16.0.5",
