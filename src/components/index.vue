@@ -58,7 +58,7 @@ interface CardData {
 
 const isLoading = ref(false);
 const hasMore = ref(true);
-const dataz = ref([]);
+const dataz = ref<CardData[]>([]);
 const newArray = ref([
         { id: 122, name: '视频 1',url:shiping1, label:'深夜车站论坛',information:'宇宙之梦',like:'45',urlavatar:boy},
         { id: 1, name: '卡片 1',url:a, label:'深夜车站论坛',information:'宇宙之梦',like:'45',urlavatar:girl},
@@ -171,12 +171,14 @@ const onRefresh = async () => {
   // 处理滚动事件
 const handleScroll = () => {
   const container = document.querySelector('.content');
-  if (
-    container.scrollTop + container.clientHeight >= container.scrollHeight && !isLoading.value && hasMore.value
-  ) {
+  if (container !== null && 
+    container.scrollTop + container.clientHeight >= container.scrollHeight && 
+    !isLoading.value && 
+    hasMore.value
+) {
     isLoading.value = true;
-    newData()
-  }
+    newData();
+}
 }
 
 function newData () {
